@@ -1,0 +1,120 @@
+:root {
+    --zega: #58f01b;
+    --bg-dark: #0a0a0a;
+    --sidebar-bg: rgba(15, 15, 15, 0.9);
+    --input-bg: rgba(30, 30, 30, 0.8);
+}
+
+body {
+    margin: 0; font-family: 'Inter', sans-serif; color: #ececec;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover; height: 100vh; overflow: hidden;
+}
+
+.app-wrapper { display: flex; height: 100vh; }
+
+/* Sidebar Logic */
+.sidebar {
+    width: 260px; background: var(--sidebar-bg); border-right: 1px solid rgba(255,255,255,0.1);
+    display: flex; flex-direction: column; padding: 20px; backdrop-filter: blur(10px);
+}
+
+.zega-logo { color: var(--zega); font-size: 1.5rem; letter-spacing: 4px; margin: 0 0 20px 0; }
+
+.new-chat-btn {
+    background: transparent; border: 1px solid #444; color: white;
+    padding: 10px; border-radius: 20px; cursor: pointer; transition: 0.3s;
+}
+.new-chat-btn:hover { border-color: var(--zega); color: var(--zega); }
+
+.chat-history { flex-grow: 1; margin-top: 30px; }
+.history-item { 
+    padding: 10px; margin-bottom: 5px; border-radius: 8px; cursor: pointer; 
+    font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.history-item:hover, .history-item.active { background: rgba(88, 240, 27, 0.1); color: var(--zega); }
+
+/* Main Chat Logic */
+.main-content { flex-grow: 1; display: flex; flex-direction: column; align-items: center; position: relative; }
+
+#chat-window {
+    width: 100%; max-width: 800px; flex-grow: 1; overflow-y: auto;
+    padding: 40px 20px; display: flex; flex-direction: column; gap: 30px;
+}
+
+.message { display: flex; gap: 15px; max-width: 85%; line-height: 1.6; }
+.ai-msg { align-self: flex-start; }
+.user-msg { align-self: flex-end; flex-direction: row-reverse; }
+
+.avatar {
+    width: 32px; height: 32px; border-radius: 50%; background: var(--zega);
+    color: black; display: flex; align-items: center; justify-content: center; font-weight: bold;
+}
+
+/* Input Area Logic */
+.input-area { width: 100%; max-width: 800px; padding: 20px; box-sizing: border-box; }
+
+.input-container {
+    background: var(--input-bg); border: 1px solid #444; border-radius: 24px;
+    padding: 10px 20px; display: flex; align-items: center; backdrop-filter: blur(20px);
+}
+
+textarea {
+    flex-grow: 1; background: transparent; border: none; color: white;
+    padding: 10px; outline: none; resize: none; font-size: 1rem;
+}
+
+.send-btn { background: var(--zega); border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; }
+
+.disclaimer { font-size: 0.7rem; color: #888; text-align: center; margin-top: 10px; }
+/* --- ZEGA ENGINE SELECTOR STYLING --- */
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(88, 240, 27, 0.2);
+}
+
+#engine-select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #111; /* Dark solid background */
+    color: var(--zega); /* Zega Green text */
+    border: 2px solid rgba(88, 240, 27, 0.4);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Removes default browser styling */
+    -webkit-appearance: none;
+    
+    /* Custom Green Arrow Icon */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2358f01b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 14px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#engine-select:hover {
+    border-color: var(--zega);
+    background-color: rgba(88, 240, 27, 0.05);
+    box-shadow: 0 0 15px rgba(88, 240, 27, 0.2);
+}
+
+/* Styling the actual list items (Note: Some browsers limit this) */
+#engine-select option {
+    background-color: #0a0a0a;
+    color: white;
+    padding: 15px;
+}
+
+.status-indicator {
+    font-size: 0.7rem;
+    color: var(--zega);
+    margin-top: 10px;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0.8;
+}
