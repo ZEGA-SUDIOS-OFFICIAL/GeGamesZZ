@@ -1,0 +1,12 @@
+{
+  "name": "NC Player",
+  "version": "1.0.1",
+  "entry": "main.py",
+  "description": "ZEGA OS rainbow-flight simulation. Features real-time GIF stream processing and parallax starfields.",
+  "banner": "displayimage.png",
+  "requirements": {
+    "python": "3.10+",
+    "libs": ["pygame", "requests", "pillow"]
+  },
+  "status": "operational"
+}

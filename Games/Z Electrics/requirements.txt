@@ -1,0 +1,22 @@
+# ==========================================================
+# ZEGA ULTIMATE SPREADSHEET - SYSTEM REQUIREMENTS
+# Version: 2026.2.5
+# Owner: ZEGA MegaHQ
+# ==========================================================
+
+# CORE NUMERICAL ENGINE (Required for C++ Bridge)
+numpy>=2.1.0
+
+# GRAPHICAL USER INTERFACE (ZEGA Industrial Theme)
+customtkinter>=5.2.2
+Pillow>=10.0.0
+
+# COMPUTER VISION & VIDEO (60FPS Intro Sync)
+opencv-python>=4.8.0
+
+# SYSTEM DIAGNOSTICS & TELEMETRY
+psutil>=5.9.0
+
+# BUILD TOOLS (For compiling funct.so)
+setuptools>=68.0.0
+wheel>=0.41.0

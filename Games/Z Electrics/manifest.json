@@ -1,0 +1,12 @@
+{
+  "name": "Z SpreadSheets",
+  "version": "1.0.0",
+  "author": "ZEGA Owner",
+  "entry": "main.py", "file.py", "requirements.txt", "logs.py",
+  "description": "Zega SpreadSheets is a great app better than Excel coded in C++ and Python, you need to run this manually through linux.",
+  "banner": "displayimage.png",
+  "requirements": [
+    
+  ],
+  "compatibility": "ZeroZwindel v1.1"
+}

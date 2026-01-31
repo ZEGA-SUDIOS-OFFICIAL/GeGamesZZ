@@ -1,0 +1,16 @@
+{
+  "name": "Lazles",
+  "version": "1.2.0",
+  "entry": "main.py",
+  "description": "Executive 3D combat simulation with F5 perspective switching and ZEGA-GREEN HUD telemetry.",
+  "banner": "displayimage.png",
+  "requirements": {
+    "python": "3.11",
+    "libs": [
+      "ursina",
+      "panda3d"
+    ]
+  },
+  "status": "operational",
+  "owner_access": "ZEGA_ROOT"
+}
